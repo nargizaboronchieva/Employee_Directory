@@ -1,7 +1,8 @@
 
 import React from 'react';
 import "./Navbar.css";
-import Button from "./Button"
+import Button from "./Button";
+import Search from "./Search.js"
 
 function Navbar(){
     return(
