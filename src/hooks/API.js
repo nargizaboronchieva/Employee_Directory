@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import axios from "axios"
 
 // Check out 20-State/03-Ins_useEffect
@@ -22,7 +22,7 @@ export function useGet(url, sort){
             }
         }
         getEmployees()
-    }, [url])
+    }, [url, sort])
 
 
     function sortEmployees(employees){
@@ -38,6 +38,6 @@ export function useGet(url, sort){
 
         console.log("array sorted: ", sortedEmployees)
     }
-    
+
     return employees
 }
