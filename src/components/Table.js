@@ -4,7 +4,7 @@ import "./Table.css"
 import TableRow from "./TableRow"
 
 function Table(){
-    const employees =useGet("https://randomuser.me/api/?results=25");
+    const employees =useGet("https://randomuser.me/api/?results=25", "");
     const employeeRows = employees.map(employee => 
             {
                 return(
