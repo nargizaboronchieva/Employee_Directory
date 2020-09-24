@@ -14,11 +14,6 @@ function Navbar(){
                 <Button>UID</Button>
                 <Button>Age</Button>
             </div>
-            <div className="descriptor">
-                <div className="bold">Filter Options: </div>
-                <Button>Filter Off</Button>
-                <Button>Gender</Button>
-            </div>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import axios from "axios"
 
 // Check out 20-State/03-Ins_useEffect
-export function useGet(url, sort){
+export function useGet(url){
     const [employees, setEmployees] = useState([])
 
 
@@ -10,25 +10,34 @@ export function useGet(url, sort){
         async function getEmployees(){
             try {
                 const response = await axios.get(url)
-                if(sort === ""){
-                    setEmployees(response.data.results)
-                    sortEmployees(response.data.results)
-                }
-                // if(sort === "yes"){
-                //     sortEmployees()
-                // }
+                setEmployees(response.data.results)
+                
             } catch (error) {
                 console.log("error ocurred getting info from the API: ", error)
             }
         }
         getEmployees()
-    }, [url, sort])
+    },[url])
+
+    useEffect(()=>{
+        switch(sort){
+            case "name":
+                sortByName()
+                break
+            default:
+                console.log("sort does not match the sort case")
+        }
+    }, [sort])
+
+    function sortFunc(sort){
+        setSort(sort);
+    }
 
 
-    function sortEmployees(employees){
-        let sortedEmployees = employees;
 
-        sortedEmployees.sort(function(a,b){
+        function sortByName(){
+            console.log(`1.${employees[0].name.first} 2.${employees[1].name.first}`)
+            employees.sort(function(a,b){
             if(a.name.first < b.name.first){
                 return -1;
             }else{
@@ -36,8 +45,8 @@ export function useGet(url, sort){
             }
         })
 
-        console.log("array sorted: ", sortedEmployees)
+        setEmployees(employees)
+
     }
 
-    return employees
-}
+    return {employees, sortFunc}
