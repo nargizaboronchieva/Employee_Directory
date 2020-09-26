@@ -4,12 +4,12 @@ import "./TableRow.css"
 function TableRow(){
     return(
         <tr>
-            <td>Jake</td>
-            <td>O'Toole</td>
-            <td>90104391</td>
-            <td>Male</td>
-            <td>jake@jakeotoole.com</td>
-            <td>29</td>
+            <td>Nargiza</td>
+            <td>Boronchieva</td>
+            <td>9292585225</td>
+            <td>Female</td>
+            <td>test@gmail.com</td>
+            <td>31</td>
         </tr>
     )
 }

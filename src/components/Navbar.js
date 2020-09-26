@@ -1,7 +1,6 @@
 
 import React from 'react';
 import "./Navbar.css";
-import Button from "./Button";
 import Search from "./Search"
 
 function Navbar(){
@@ -9,10 +8,8 @@ function Navbar(){
         <div className="navbar">
             <div className="logo bold">Employee Directory</div>
             <div className="descriptor">
-                <div className="bold">Sort Options: </div>
-                <Button>Name</Button>
-                <Button>UID</Button>
-                <Button>Age</Button>
+                <div className="bold">Employee Search </div>
+                <Search/>
             </div>
         </div>
     )
