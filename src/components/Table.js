@@ -24,6 +24,7 @@ function Table() {
                     <td>Gender</td>
                     <td>E-mail</td>
                     <td onClick={() => sortFunc("age")}><Button>Age</Button></td>
+                    <td>Picture</td>
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +37,15 @@ function Table() {
                             <td>{employee.gender}</td>
                             <td>{employee.email}</td>
                             <td>{employee.dob.age}</td>
+                            <td>
+                                <div id="photoDiv" width="50px">
+                                    <img
+                                        src={employee.picture.large}
+                                        alt="{employee.name.first + ' ' + employee.name.last}"
+                                        width="50px"
+                                    />
+                                </div>
+                            </td>
                         </tr>
                     )
                 }

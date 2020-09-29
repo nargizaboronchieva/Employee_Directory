@@ -10,6 +10,7 @@ function TableRow(){
             <td>Female</td>
             <td>test@gmail.com</td>
             <td>31</td>
+            <td>picture</td>
         </tr>
     )
 }

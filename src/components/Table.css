@@ -1,5 +1,26 @@
-thead{
-    background-color: #EABCAC;
-    font-weight: bold;
-    font-size: 30px;
-} 
+
+
+table {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    width: 100%;
+    border: 1px dashed gray;
+    margin-top: 10px;
+}
+
+table th {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+table td {
+    border: 1px dashed gray;
+    text-align: left;
+    padding: 5px;
+    width: fit-content;
+}
+
+img {
+    border-radius: 25px;
+    margin: 5px;
+}
