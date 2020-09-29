@@ -6,7 +6,7 @@ import { EmployeeContext } from './EmployeeContext.js';
 
 //Check out 20-State/03-Stu_useState
 function Table() {
-    // https://randomuser.me/documentation#howto
+  
     // exists in case I ever built functionality in to change the url, which would get a new set of employees. Currently not being used other than to store the url.
     const [url] = useState("https://randomuser.me/api/?results=250")
     // custom hook used for getting the employees from the api and storing the sort functions
@@ -38,11 +38,11 @@ function Table() {
                             <td>{employee.email}</td>
                             <td>{employee.dob.age}</td>
                             <td>
-                                <div id="photoDiv" width="50px">
+                                <div id="photoDiv" width="100px">
                                     <img
                                         src={employee.picture.large}
                                         alt="{employee.name.first + ' ' + employee.name.last}"
-                                        width="50px"
+                                        width="150px"
                                     />
                                 </div>
                             </td>
