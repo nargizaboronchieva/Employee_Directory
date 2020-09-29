@@ -1,5 +1,6 @@
 .bold{
     font-weight: bold;
+    font-size: 40px;
 }
 
 .descriptor{
@@ -7,16 +8,17 @@
 }
 
 .descriptor input{
-    margin: 0px 6px 0px 6px;
+    margin: 0px 6px 0px 20px;
 }
 
 .logo{
-    font-size: 24px;
+    font-size: 80px;
+    text-align: center;
 }
 
 .navbar{
     display: flex;
-    background-color: #74BDCB;
+    background-color: #874E4C;
     color: white;
     justify-content: space-between;
     align-items: center;
